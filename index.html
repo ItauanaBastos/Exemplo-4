@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #616161;
+        }
+        .container {
+            max-width: 450px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(6, 4, 119, 0.555);
+            text-align: center;
+            margin-top: 90px;
+        }
+        ul {
+            list-style-type: none; /* Remove a bolinha padrão dos itens de lista */
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            font-size: 18px;
+            border-bottom: 1px solid #979595;
+        }
+        li:last-child {
+            border-bottom: none; /* Remove a borda do último item */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Números de 1 a 10</h1>
+        <ul id="numeroList"></ul>
+    </div>
+
+    <script>
+        // Função para gerar a lista de números
+        function gerarLista() {
+            const lista = document.getElementById('numeroList');
+
+            // Gera os números de 1 a 10 e os adiciona à lista e ao console
+            for (let i = 1; i <= 10; i++) {
+                // Cria um novo item de lista
+                const item = document.createElement('li');
+                item.textContent = i;
+
+                // Adiciona o item à lista
+                lista.appendChild(item);
+
+                // Exibe o número no console
+                console.log(i);
+            }
+        }
+
+        // Chama a função para gerar a lista quando a página for carregada
+        gerarLista();
+    </script>
+</body>
+</html>
